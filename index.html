@@ -14,14 +14,16 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="conateiner">
+    <div class="container">
+      <div class="weather-app">
       <div class="row">
-        <div class="col-6 city">
+        <div class="col-6">
           <h1>London</h1>
-          <h1>6°c|f</h1>
+          <p class = "day-time">Tuesday 19:41</p>
+          <h2>6°c|f</h2>
           <img src="src/img/sunny1.png" alt="Sunny" width="80px" />
         </div>
-        <div class="col-6" citySearch>
+        <div class="col-6">
 <form>
                   <div class="searchbox">
                     <input
@@ -29,9 +31,10 @@
                       placeholder="Enter your city"
                       id="searchInput"
                     /></div>
-                    <input type="Submit" value="search" class="btn btn-info"/>
-                    <button class="btn btn-info">Current location</button>
-                  <br><br>
+                    <input type="Submit" value="search" class="btn btn-outline-info"/>
+                    <button class="btn btn-outline-info">Current location</button>
+                  <br/><br/>
+                  
                     <p class = "conditions">
                     Clear
                   </p>
@@ -39,9 +42,11 @@
       <li>Precipitation: 3%</li>
       <li>Humidity: 93%</li>
       <li>Wind: 8km/h</li>
-    </ul>
-        </div>
-      </div>
+                    </ul>
+  </div>
+</div>
+</div>
+
       <small>
         <a href ="https://github.com/lottie-isobel/vanilla-weather-app-final" target="_blank">Open-source code</a> by Charlotte Easton
       </small>
