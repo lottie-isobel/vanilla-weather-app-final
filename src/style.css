@@ -1,0 +1,25 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  color: black;
+  text-shadow: grey 0.5px 0.5px;
+}
+
+.weather-app {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 25px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
