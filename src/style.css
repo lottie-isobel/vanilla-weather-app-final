@@ -4,13 +4,41 @@ body {
   text-shadow: grey 0.5px 0.5px;
 }
 
-.weather-app {
+.weather-app-wrapper {
   max-width: 600px;
   margin: 0 auto;
+}
+
+.weather-app {
   margin-top: 20px;
   padding: 25px;
   border: 1px solid grey;
   border-radius: 10px;
+}
+
+.day-time {
+  margin-bottom: 30px;
+}
+
+.weather-temperature .temp {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.weather-temperature .units {
+  position: relative;
+  top: -14px;
+  font-weight: 350;
+  font-size: 20px;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: 60px;
+}
+
+img {
+  padding-left: 20px;
 }
 
 ul {
