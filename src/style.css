@@ -18,6 +18,7 @@ body {
 
 .day-time {
   margin-bottom: 30px;
+  margin-left: 5px;
 }
 
 .weather-temperature .temp {
@@ -30,6 +31,14 @@ body {
   top: -14px;
   font-weight: 350;
   font-size: 20px;
+}
+
+.btn {
+  margin-top: 5px;
+}
+
+#conditions {
+  text-transform: capitalize;
 }
 
 h1 {

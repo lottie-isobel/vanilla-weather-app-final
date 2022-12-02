@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -26,12 +27,12 @@
         <div class="weather-app">
           <div class="row">
             <div class="col-6">
-              <h1>London</h1>
+              <h1 id="city"></h1>
               <div class="weather-temperature">
                 <p class="day-time">Tuesday 19:41</p>
                 <div class="d-flex weather-temperature">
                   <p class="current-temperature">
-                    <span class="temp">6</span><span class="units"><a href "">°c</a>|<a href "">°f</a></span>
+                    <span class = "temp"></span><span class="units"><a href "">°c</a>|<a href "">°f</a></span>
                   </p>
                   <img src="src/img/sunny1.png" alt="Sunny" width="100px" />
                 </div>
@@ -55,11 +56,10 @@
               </form>
               <br /><br />
 
-              <p class="conditions">Clear</p>
+              <p id="conditions">Clear</p>
               <ul>
-                <li>Precipitation: 3%</li>
-                <li>Humidity: 93%</li>
-                <li>Wind: 8km/h</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span>km/h</li>
               </ul>
             </div>
           </div>
