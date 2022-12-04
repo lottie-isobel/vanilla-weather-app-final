@@ -55,7 +55,7 @@ function displayFarenheightTemperature(event) {
   celciusLink.classList.remove("active");
   farenheightLink.classList.add("active");
   let temperatureElement = document.querySelector(".temp");
-  let farenheightTemperature = (celciusTemperature * 9) / 5 + 32;
+  let farenheightTemperature = Math.round((celciusTemperature * 9) / 5 + 32);
   temperatureElement.innerHTML = farenheightTemperature;
 }
 
