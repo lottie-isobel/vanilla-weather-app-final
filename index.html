@@ -39,20 +39,23 @@
               </div>
             </div>
             <div class="col-6">
-              <form>
+              <form id ="search-form">
                 <div class="searchbox">
                   <input
-                    type="text"
+                    type="search"
                     placeholder="Enter your city"
-                    id="searchInput"
+                    id="city-input"
+                    class = "form-control"
+                    autocomplete = "off"
                   />
-                </div>
+                
                 <input
                   type="Submit"
                   value="search"
                   class="btn btn-outline-info"
                 />
                 <button class="btn btn-outline-info">Current location</button>
+             </div>
               </form>
               <br /><br />
 

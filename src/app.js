@@ -23,7 +23,6 @@ let currentDate = document.querySelector(".day-time");
 currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
 function displayTemperature(response) {
-  console.log(response);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.city;
   let temperatureElement = document.querySelector(".temp");
@@ -37,8 +36,18 @@ function displayTemperature(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", response.data.condition.icon_url);
 }
-let citySearch = "Abuja";
-let apiKey = "4f6e636etc17733b801df4o7b14ba35b";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${citySearch}&key=${apiKey}&units=metric`;
 
-https: axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+  let apiKey = "4f6e636etc17733b801df4o7b14ba35b";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
