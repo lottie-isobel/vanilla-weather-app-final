@@ -23,25 +23,22 @@ let currentDate = document.querySelector(".day-time");
 currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
 function displayTemperature(response) {
+  console.log(response);
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = response.data.name;
+  cityElement.innerHTML = response.data.city;
   let temperatureElement = document.querySelector(".temp");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   let conditionsElement = document.querySelector("#conditions");
-  conditionsElement.innerHTML = response.data.weather[0].description;
+  conditionsElement.innerHTML = response.data.condition.description;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = response.data.main.humidity;
+  humidityElement.innerHTML = response.data.temperature.humidity;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  iconElement.setAttribute("src", response.data.condition.icon_url);
 }
-let searchCity = "London";
-let apiKey = "58a6775f97527351bf6c6966e209be39";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&appid=${apiKey}&units=metric`;
+let citySearch = "Abuja";
+let apiKey = "4f6e636etc17733b801df4o7b14ba35b";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${citySearch}&key=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+https: axios.get(apiUrl).then(displayTemperature);
