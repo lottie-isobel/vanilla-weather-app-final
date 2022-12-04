@@ -24,17 +24,17 @@ currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
 function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = response.data.city;
   let temperatureElement = document.querySelector(".temp");
-  let celciusTemperature = Math.round(response.data.temperature.current);
-  temperatureElement.innerHTML = celciusTemperature;
   let conditionsElement = document.querySelector("#conditions");
-  conditionsElement.innerHTML = response.data.condition.description;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = response.data.temperature.humidity;
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = Math.round(response.data.wind.speed);
   let iconElement = document.querySelector("#icon");
+  celciusTemperature = Math.round(response.data.temperature.current);
+  cityElement.innerHTML = response.data.city;
+  temperatureElement.innerHTML = celciusTemperature;
+  conditionsElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = response.data.temperature.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute("src", response.data.condition.icon_url);
 }
 
