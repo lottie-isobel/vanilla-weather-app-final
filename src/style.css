@@ -54,13 +54,30 @@ body {
   text-transform: capitalize;
 }
 
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.current-icon {
+  padding-left: 20px;
+}
+
+.weather-forecast-day {
+  font-size: 16px;
+}
+
+.weather-forecast-temperature {
+  font-size: 14px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+
 h1 {
   margin-bottom: 0;
   font-size: 60px;
-}
-
-img {
-  padding-left: 20px;
 }
 
 ul {
