@@ -32,30 +32,36 @@
                 <p class="day-time">Tuesday 19:41</p>
                 <div class="d-flex weather-temperature">
                   <p class="current-temperature">
-                    <span class = "temp"></span><span class="units"><a href "" id="celcius-link" class="active">°c</a>|<a href "" id="farenheight-link">°f</a></span>
+                    <span class="temp"></span><span class="units">°c</span>
                   </p>
-                  <img class = "current-icon" src="" alt="Sunny" width="100px" id="icon"/>
+                  <img
+                    class="current-icon"
+                    src=""
+                    alt="Sunny"
+                    width="100px"
+                    id="icon"
+                  />
                 </div>
               </div>
             </div>
             <div class="col-6">
-              <form id ="search-form">
+              <form id="search-form">
                 <div class="searchbox">
                   <input
                     type="search"
                     placeholder="Enter your city"
                     id="city-input"
-                    class = "form-control"
-                    autocomplete = "off"
+                    class="form-control"
+                    autocomplete="off"
                   />
-                
-                <input
-                  type="Submit"
-                  value="search"
-                  class="btn btn-outline-info"
-                />
-                <button class="btn btn-outline-info">Current location</button>
-             </div>
+
+                  <input
+                    type="Submit"
+                    value="search"
+                    class="btn btn-outline-info"
+                  />
+                  <button class="btn btn-outline-info">Current location</button>
+                </div>
               </form>
               <br /><br />
 
@@ -66,25 +72,14 @@
               </ul>
             </div>
           </div>
-          <div class = "weather-forecast" id = "forecast">
-            <div class = "row">
-              <div class = "col-2">
-                <div class = "weather-forecast-day">
-Wed</div>
-<img src = "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" width="60"/>
-<div class = "weather-forecast-temperature">
-  <span class = "weather-forecast-temperature-max">12°</span>
-  <span class = "weather-forecast-temperature-min">8°</span>
-  </div>
-            </div>
-          </div>
-        </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
         <small>
           <a
             href="https://github.com/lottie-isobel/vanilla-weather-app-final"
             target="_blank"
-            >Open-source code</a>
+            >Open-source code</a
+          >
           by Charlotte Easton
         </small>
       </div>
