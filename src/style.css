@@ -90,3 +90,10 @@ li {
   padding: 0;
   list-style: none;
 }
+
+@media (max-width: 575px) {
+  h1 {
+    font-size: 32px;
+    padding-bottom: 0;
+  }
+}

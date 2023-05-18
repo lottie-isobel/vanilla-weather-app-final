@@ -17,7 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js">
+    </script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -26,19 +27,19 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="row">
-            <div class="col-6">
+            <div class="col-7">
               <h1 id="city"></h1>
               <div class="weather-temperature">
                 <p class="last-update">
-                  Last updated:<span class="day-time"></span>
+                 <div class="d-none d-sm-block"> Last updated:</div><span class="day-time"></span>
                 </p>
 
                 <div class="d-flex weather-temperature">
-                  <p class="current-temperature">
+                  <p class="current-temperature d-none d-sm-block">
                     <span class="temp"></span><span class="units">°c</span>
                   </p>
                   <img
-                    class="current-icon"
+                    class="current-icon d-none d-sm-block"
                     src=""
                     alt="Sunny"
                     width="100px"
@@ -47,12 +48,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-5">
               <form id="search-form">
                 <div class="searchbox">
                   <input
                     type="search"
-                    placeholder="Enter your city"
+                    placeholder="City"
                     id="city-input"
                     class="form-control"
                     autocomplete="off"
@@ -63,15 +64,17 @@
                     value="search"
                     class="btn btn-outline-info"
                   />
+                  
                 </div>
               </form>
               <br />
-
+<div class="d-none d-sm-block">
               <ul>
                 <li id="conditions"></li>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span>km/h</li>
               </ul>
+              </div>
             </div>
           </div>
           <div class="weather-forecast" id="forecast"></div>
